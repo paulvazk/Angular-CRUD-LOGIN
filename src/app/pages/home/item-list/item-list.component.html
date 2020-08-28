@@ -1,0 +1,26 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="text-center">Lista de Focos</h6>
+    <table class="table table-sm table-hover">
+      <thead>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of itemList">
+          <td>{{i.ubicacion}}</td>
+          <td>{{i.estado}}</td>
+          <td>
+            <button class="btn btn-secondary text-white" (click)="onEdit(i)"> 
+              <i class="fas fa-edit"></i>
+              Editar
+            </button>
+            <button class="btn btn-danger text-white" (click)="onDelete(i.$key)">
+              <i class="fas fa-trash-o"></i>
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
